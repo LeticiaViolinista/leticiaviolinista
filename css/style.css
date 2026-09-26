@@ -35318,10 +35318,7 @@ css
    PROTEÇÃO DOS ELEMENTOS DECORATIVOS
    ========================================================= */
 
-section {
-    position: relative;
-    overflow: hidden;
-}
+
 
 
 section::before,
@@ -35352,14 +35349,14 @@ css
 html {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    
 }
 
 body {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    overflow-x: hidden;
+    
 }
 
 *,
@@ -35420,7 +35417,7 @@ iframe {
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     .container {
@@ -35462,7 +35459,7 @@ iframe {
     section {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     .whatsapp-float {
@@ -35484,7 +35481,7 @@ iframe {
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     .container {
@@ -35498,7 +35495,7 @@ iframe {
     section {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     img,
@@ -35547,7 +35544,7 @@ iframe {
     body {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     .container {
@@ -35561,7 +35558,7 @@ iframe {
     section {
         width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        
     }
 
     .whatsapp-float {
@@ -35894,7 +35891,7 @@ css
         height: auto;
         min-height: 0;
 
-        overflow: hidden;
+        
     }
 
     .repertorio-categoria-image img {
@@ -35934,6 +35931,226 @@ css
 
         object-fit: contain;
         object-position: center center;
+    }
+}
+css
+/* =========================================================
+   CORREÇÃO ESTRUTURAL MOBILE
+   LETÍCIA VIOLINISTA
+   ========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Evita que imagens criem largura extra */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   CONTAINERS
+   ========================================================= */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav {
+        max-width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+
+        width: 44px;
+        height: 44px;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        cursor: pointer;
+
+        position: relative;
+        z-index: 10001;
+    }
+
+    .nav-menu {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================================
+   CORREÇÃO DAS SEÇÕES
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .row,
+    .grid,
+    .flex {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* =========================================================
+   REPERTÓRIO
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .repertorio-categorias {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .repertorio-categoria {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .repertorio-categoria-image {
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        box-sizing: border-box;
+    }
+
+    .repertorio-categoria-image img {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+        object-position: center;
+
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   BOTÃO WHATSAPP
+   IMPORTANTE: DEVE FICAR FIXO NA TELA
+   ========================================================= */
+
+.whatsapp-float {
+    position: fixed !important;
+
+    right: 18px !important;
+    bottom: 18px !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    width: 58px !important;
+    height: 58px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999 !important;
+
+    transform: none !important;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+}
+
+.whatsapp-float i {
+    font-size: 1.6rem;
+}
+
+/* =========================================================
+   CELULAR PEQUENO
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .whatsapp-float {
+        right: 14px !important;
+        bottom: 14px !important;
+
+        width: 54px !important;
+        height: 54px !important;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.45rem;
     }
 }
 
